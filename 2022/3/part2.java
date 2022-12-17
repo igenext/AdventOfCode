@@ -5,13 +5,15 @@ class part2{
     public static void main(String[] args) {
         File file = new File("./input.txt");
         int sum = 0;
+        Set<Character> hs = new HashSet<>();
+        Set<Character> hs1 = new HashSet<>();
+        char a = 'a';
         try{
             Scanner sc = new Scanner(file);
             while(sc.hasNextLine()){
-                Set<Character> hs = new HashSet<>();
-                Set<Character> hs1 = new HashSet<>();
+                hs.clear();;
+                hs1.clear();
                 String data1 = sc.nextLine();
-                char a = 'a';
                 for(char c : sc.nextLine().toCharArray()) hs.add(c);
                 for(char e: sc.nextLine().toCharArray()) hs1.add(e);
                 for(char b: data1.toCharArray()){
